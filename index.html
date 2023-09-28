@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="header">
+        <div class ="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contact us</a></li>                      
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h!>Hi. I m <span>Rupesh mishra</span><br> from india</h>
+            </div>
+        </div>
+    </div>
+<!-- ---------------------about------------------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/porto.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-tittle">About me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse amet ut cupiditate expedita quo autem doloremque corporis reprehenderit fuga, aliquid rerum culpa, veritatis deleniti totam iusto optio quam dolore tempore.</p>
+                <div class="tab-tittle">
+                    <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/app interface</li>
+                        <li><span>WEB DEVELOPMENT</span><br>web app development</li>
+                        <li><span>APP DEVELOPMENT</span><br>Building android/ios apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2023-Current</span><br>UI/UX Design Training at ET Training</li>
+                        <li><span>2021-Current</span><br>BTECH from CHANDIGARH UNIVERSITY</li>
+                        <li><span>2017-2019</span><br>SECONDARY from GARHWA</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2016</span><br>Designing Web/app interface</li>
+                        <li><span>2016</span><br>MBA From MIT</li>
+                        <li><span>2014</span><br>Building android/ios apps</li>
+                    </ul>
+                </div>
+            </div>           
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active tab")
+        }
+    }
+</script>
+
+
+</body>
+</html>
